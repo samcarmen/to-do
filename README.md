@@ -53,28 +53,51 @@ To test Google authentication, please follow these steps:
 
 #### TO-DO API Endpoints:
 
-List all TODOs: Retrieve a list of all TODO items.
+List all TODOs: 
+
+Retrieve a list of all TODO items.
 ```bash
 curl -H "Authorization: Token [your drf token]" http://localhost:8000/todo/todos/
 
 ```
 
-Add a TODO: Add a new TODO item to the list.
+Add a TODO: 
+
+Add a new TODO item to the list.
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Token [your DRF token]" -d '{"description": "test"}' http://localhost:8000/todo/add/
 
 ```
 
-Delete a TODO: Delete a specific TODO item by its ID.
+Delete a TODO: 
+
+Delete a specific TODO item by its ID.
 ```bash
 curl -X DELETE -H "Authorization: Token [your DRF token]" http://localhost:8000/todo/{id}/delete/
 
 ```
 
-Mark TODO as Complete: Mark a specific TODO item as complete by its ID.
+Mark TODO as Complete: 
+
+Mark a specific TODO item as complete by its ID.
 ```bash
 curl -X PATCH -H "Authorization: Token [your DRF token]" http://localhost:8000/todo/{id}/complete/
 
 ```
 
 Note: After making changes using the "Add," "Delete," or "Mark as Complete" endpoints, refresh the home page to see the updates reflected.
+
+## Unit Tests
+Unit tests have been implemented to thoroughly test the functionality of both Google logins and each of the API endpoints. This ensures the robustness of the application's features.
+
+To run the unit tests, use the following commands:
+
+For testing Google logins:
+```bash
+python manage.py test todo.tests.auth_tests   
+```
+
+For testing API endpoints:
+```bash
+python manage.py test todo.tests.todo_tests   
+```

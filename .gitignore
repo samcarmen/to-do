@@ -1,3 +1,16 @@
-.venv
+# Python virtual environment
+.venv/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Database files
+db.sqlite3
+
+# Compiled code or build artifacts
+__pycache__/
 todo/__pycache__
 todo_backend/__pycache__
+todo/tests/__pycache__
+*.pyc
