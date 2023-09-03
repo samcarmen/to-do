@@ -87,6 +87,9 @@ curl -X PATCH -H "Authorization: Token [your DRF token]" http://localhost:8000/t
 
 Note: After making changes using the "Add," "Delete," or "Mark as Complete" endpoints, refresh the home page to see the updates reflected.
 
+Below is an example of the homepage:
+
+
 ## Unit Tests
 Unit tests have been implemented to thoroughly test the functionality of both Google logins and each of the API endpoints. This ensures the robustness of the application's features.
 
