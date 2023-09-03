@@ -23,7 +23,6 @@ def list_todos(request):
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def add_todo(request):
-    print(request.user)
     serializer = TodoSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save(user=request.user)
