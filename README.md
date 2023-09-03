@@ -18,6 +18,10 @@ A simple TODO-List Server with REST API endpoints for managing TODO items. Users
 
 ## Getting Started
 
+### Docker Hub Image
+
+The Docker image for this project has been published to Docker Hub. You can find it at the following link: [Docker Hub - TODO-List Server](https://hub.docker.com/repository/docker/samcarmen/todo-backend/)
+
 ### Running the App
 
 1. Clone the repository:
