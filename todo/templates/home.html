@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <title>TODOs</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>My TODOs</h1>
+    <p>Your drf token is: {{ drf_token }}</p>
+    <ul>
+        {% for todo in todos %}
+            <li>
+                {{ todo.description }}
+                {% if todo.is_completed %}
+                    <strong>Completed</strong>
+                {% else %}
+                    <em>Incomplete</em>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

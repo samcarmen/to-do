@@ -1,0 +1,50 @@
+/* Reset some default browser styles */
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a background color and some padding to the body */
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the h1 */
+h1 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style the list */
+ul {
+    list-style: none;
+}
+
+/* Style each todo item */
+li {
+    background-color: #fff;
+    margin: 8px 0;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+/* Style completed todos */
+li strong {
+    color: green;
+}
+
+/* Style incomplete todos */
+li em {
+    color: red;
+}
+
+/* Add some hover effects */
+li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
