@@ -13,8 +13,10 @@ from ..serializers import TodoSerializer
 
 
 @api_view(["GET"])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
 def list_todos(request):
-    todos = Todo.objects.all()
+    todos = Todo.objects.filter(user__username=request.user)
     serializer = TodoSerializer(todos, many=True)
     return Response(serializer.data)
 
