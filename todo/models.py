@@ -12,3 +12,4 @@ class Todo(models.Model):
     description = models.TextField()
     is_completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+    target_date = models.DateTimeField()
